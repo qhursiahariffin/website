@@ -1,0 +1,392 @@
+<!--doctype html-->
+<html>
+<head>
+
+<title>QA | HOME</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<style>
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#FFFFFF;	
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	padding:30px 50px;
+	position:relative;
+	width:100%;
+	height: 100vh;
+	box-sizing: border-box;
+	background-size: 1330px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family: calibri;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	background-color:#Ffffff; 
+	z-index: 1;
+}
+ 
+.menu{
+	display: flex;
+}
+.menu li a{
+	padding: 10px 15px;
+	color:#6c707c;
+	font-size: 13px;
+	
+}
+.logo{
+	font-size: 50px;
+	font-weight: bold;
+	color:#ffaab0;
+	font-family:Tahoma;
+}
+.toggle{
+	display: none;
+}
+.active a,
+.menu li a:hover{
+	background-color:#ffaab0;
+	color:#FFF!important;
+	font-weight: bold;
+	transition: all ease 0.5s;
+}
+.cah{
+	height:500px;
+	position:absolute;
+	bottom:40px;
+	left:85%;
+	transform: translateX(-75%);
+}
+.text-container p:nth-child(1){
+	font-family: calibri;
+	font-weight:bold;
+	color:#000000;
+	font-size:22px;
+}
+.text-container p:nth-child(2){
+	font-family:tahoma;
+	font-weight:bold;
+	letter-spacing:1px;
+	color:#1a1a1a;
+	font-size:50px;
+	
+}
+.text-container p:nth-child(3){
+	font-family: calibri;
+	color: #000000;
+	font-size:30px;
+	line-height:30px;
+}
+ 
+.text-container p{
+	margin:45px 0px 25px;
+	line-height:0px;
+}
+.text-container{
+	position: absolute;
+	left:20%;
+	top:42%;
+	transform:translate(-15%,-30%);
+}
+#find{
+	width:100%;
+	height:100vh;
+	box-sizing: border-box;
+	font-family: calibri;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px ;
+}
+.f-heading h1{
+	color:#FFaab0;
+	font-size: 3rem;
+	margin: 0px;
+	padding: 0px;
+	
+}
+.f-heading p{
+	color:#000000;
+	font-size: 1rem;
+	margin: 0px;
+	padding: 0px;
+}
+.f-heading{
+	text-align: center;
+	margin: 20px 0px;
+}
+.f-box{
+	background-color: #ffaab0;
+	width:350px;
+	height: 300px;
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+	position: relative;
+}
+.b-container{
+	display: center;
+	justify-content: center;
+	align-content: center;
+ 	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows: auto;
+
+	
+}
+.f-b-img{
+	width: 100%;
+	height: 70%;
+	
+}
+.f-b-img img{
+	width:100%;
+	height: 100%;
+	
+}
+.f-b-text{
+	width: 100%;
+	height: 30%;
+	background-color:#ffaab0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.f-b-text a{
+	margin: 0px;
+	color:#FFFFFF;
+	font-size: 1.1rem;
+	font-family: calibri;
+}
+.f-b-text a:hover{
+	color:rgba(255,255,255,0.50)
+}
+.f-type{
+	font-family: comic sans ms;
+	color:#FFFFFF;
+	background-color: #ffaab0;
+	padding: 10px 15px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
+.f-box:hover{
+	transform:translateY(-10px);
+	transition: all ease 0.3s;
+	
+}
+.middle{
+  position: absolute;
+  top: 264%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.counting-sec{
+  padding: 40px 0;
+  width: 100%;
+  background: #ffaab0;
+}
+.inner-width{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.col{
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.col i{
+  font-size: 40px;
+  color: #333;
+}
+.num{
+  font-size: 40px;
+  margin: 20px 0;
+}
+footer p{
+	font-family: calibri;
+}
+footer p:nth-child(1){
+	font-size: 30px;
+	font-weight:bold;
+	color:#191919;
+	line-height:10px;
+}
+footer p:nth-child(2){
+	font-size: 16px;
+	color:#7e7d7d;
+	width:600px;
+	text-align: center;
+}
+footer{
+	height:300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.s-res{
+	color:#565555;
+	font-size: 12px;
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	transform: translateX(-50%);
+}
+</style>
+	
+</head>
+<body>
+<section id="main">
+	<nav>
+	<a href="index.html" class="logo">QA</a>
+	<div class="toggle"></div>
+	<ul class="menu">
+	<li class="active"><a href="index.html" >Home</a></li>	
+	<li><a href="about.html">ABOUT</a></li>	
+	<li><a href="experience.html">EXPERIENCES</a></li>	
+	<li><a href="education.html">EDUCATION</a></li>		
+	<li><a href="family.html">FAMILY</a></li>
+	<li><a href="gallery.html">GALLERY</a></li>	
+</ul>
+</nav>
+</section>
+
+<div class="text-container">
+	<p>Holla,</p>
+	<p>I AM <font color="#ffaab0">QHURSIAH</font></p>
+	<p>Welcome to my <br><font color="#ffaab0">PERSONAL WEBSITE</font></p>
+
+</div>
+<img alt="cah" class="cah" src="image/cah1.jpeg">
+<br/><br/><br/><br/><br/>
+<section id="find">
+<div class="f-heading">
+	<h1>WHAT YOU CAN FIND HERE</h1>
+	<p>Here is some of the sneakpeak.</p>
+</div>
+<div class="b-container">
+<div class="f-box">
+<div class="f-b-img">
+	<div class="f-type">ABOUT</div>
+	<img src="media/child.gif">
+</div>
+<div class="f-b-text">
+	<a href="about.html">All you can know about me.</a>	
+</div>
+</div>
+<div class="f-box">
+<div class="f-b-img">
+	<div class="f-type">EXPERIENCE</div>
+	<img src="media/exp.gif">
+</div>
+<div class="f-b-text">
+	<a href="experience.html">Get to know my experiences.</a>	
+</div>
+</div>
+<div class="f-box">
+<div class="f-b-img">
+	<div class="f-type">EDUCATION</div>
+	<img src="media/edu.gif">
+</div>
+<div class="f-b-text">
+	<a href="education.html">Get to know my education history.</a>	
+</div>
+</div>
+<div class="f-box">
+<div class="f-b-img">
+	<div class="f-type">FAMILY</div>
+	<img src="media/fam.gif">
+</div>
+<div class="f-b-text">
+	<a href="family.html">Get to know my loved one.</a>	
+</div>
+</div>
+<div class="f-box">
+<div class="f-b-img">
+	<div class="f-type">Gallery</div>
+	<img src="media/gallery.gif">
+</div>
+<div class="f-b-text">
+	<a href="gallery.html">Collection of my album.</a>	
+</div>
+</div>
+</section>
+
+<div class="middle">
+    <div class="counting-sec">
+      <div class="inner-width">
+        <div class="col">
+          <i class="facebook"></i>
+          <div class="num">1206</div>
+          FACEBOOK
+        </div>
+
+        <div class="col">
+          <i class="twitter"></i>
+          <div class="num">127</div>
+          TWITTER
+        </div>
+
+        <div class="col">
+          <i class="far fa-object-group"></i>
+          <div class="num">1172</div>
+          INSTAGRAM
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    $(".num").counterUp({delay:10,time:1000});
+  </script>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<footer>
+  <p>QA - Personal Website</p>
+	 <p>Have fun in getting to know me!</p>
+	<div class="social-icons">
+	<a href="https://www.facebook.com/sitinurqhursiah.ariffin/" target="_blank"><img src="image/fblogo.png"></img></i></a>
+	<a href="https://twitter.com/tehaisforlife" target="_blank"><img src="image/twitterlogo.png"></img></i></a>
+	<a href="https://www.instagram.com/cahriffin/" target="_blank"><img src="image/instalogo.png"></img></i></a>
+	</div>
+	<p class="s-res">This website are designed for IMD311 Individual Assignment.</p>
+</footer>
+
+</body>
+</html>
